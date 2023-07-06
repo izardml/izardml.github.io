@@ -14,3 +14,8 @@ document.addEventListener('click', function(e) {
         navbarNav.classList.remove('active')
     }
 })
+
+// stretched-link
+function redirectTo(url) {
+    window.location.href = url
+}
