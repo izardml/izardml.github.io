@@ -40,6 +40,7 @@ body {
 
 .navbar .navbar-title {
     background-clip: text;
+    -webkit-background-clip: text;
     background-image: var(--bg);
     color: transparent;
     font-size: 1.4rem;
@@ -56,6 +57,7 @@ body {
 
 .navbar .navbar-nav a:hover {
     background-clip: text;
+    -webkit-background-clip: text;
     background-image: var(--bg);
     color: transparent;
 }
@@ -78,6 +80,7 @@ body {
 .top h1 {
     background-image: var(--bg);
     background-clip: text;
+    -webkit-background-clip: text;
     color: transparent;
     text-align: center;
     font-size: 2rem;
@@ -95,6 +98,7 @@ body {
 .top .skill-container i {
     background-image: var(--bg);
     background-clip: text;
+    -webkit-background-clip: text;
     color: transparent;
     font-size: 5rem;
 }
@@ -140,6 +144,7 @@ footer a {
     line-height: 1.6;
     background-image: var(--bg);
     background-clip: text;
+    -webkit-background-clip: text;
     color: transparent;
 }
 
@@ -177,6 +182,7 @@ footer a {
 .project .card .card-title a {
     background-image: var(--bg);
     background-clip: text;
+    -webkit-background-clip: text;
     color: transparent;
     line-height: 1.6;
 }
