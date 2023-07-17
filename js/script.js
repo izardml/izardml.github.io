@@ -19,3 +19,30 @@ document.addEventListener('click', function(e) {
 function redirectTo(url) {
     window.location.href = url
 }
+
+// waifu
+const waifu = document.getElementById('waifu')
+const waifuList = [
+    'MifuneShioriko',
+    'YukiSetsuna',
+    'NakanoItsuki',
+    // 'FuruhashiFumino',
+    'Pareo',
+]
+const random = Math.floor(Math.random() * waifuList.length)
+
+waifu.innerHTML = waifuList[random]
+
+// greeting
+const greeting = document.getElementById('greeting')
+const hour = new Date().getHours()
+
+if(hour >= 18 || hour < 5) {
+    greeting.innerHTML = 'Konbanwa!'
+} else if(hour >= 11) {
+    greeting.innerHTML = 'Konnichiwa!'
+} else if(hour >= 5) {
+    greeting.innerHTML = 'Ohayou gozaimasu!'
+} else {
+    greeting.innerHTML = 'Error desu.'
+}

@@ -250,7 +250,8 @@ footer {
     padding: 3rem;
 }
 
-footer p {
+footer p,
+footer a {
     text-align: center;
     font-weight: 500;
     font-family: 'Courier New', Courier, monospace;
