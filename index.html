@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
+    <title>My Personal Page</title>
 
     <!-- Feather Icons -->
     <script src="https://unpkg.com/feather-icons"></script>
@@ -11,12 +11,15 @@
     <!-- Devicon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 
+    <link id="styleTheme" rel="stylesheet" href="css/light.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <!-- S:Navbar Section -->
     <nav class="navbar">
-        <a href="." class="navbar-title">izardml</a>
+        <div class="navbar-title">
+            <a href="#">izardaffa</a>
+        </div>
 
         <div class="navbar-nav">
             <a href="#top">Top</a>
@@ -27,25 +30,27 @@
         </div>
 
         <div class="navbar-extra">
+            <a href="#" id="theme" class="light active"><i data-feather="sun"></i></a>
+            <a href="#" id="theme" class="dark"><i data-feather="moon"></i></a>
             <a href="#" id="menu"><i data-feather="menu"></i></a>
         </div>
     </nav>
     <!-- E:Navbar Section -->
 
-    <!-- S:Hero Section -->
+    <!-- S:Top Section -->
     <section id="top" class="top">
-        <div>
+        <div class="top-container">
             <h1>Welcome!</h1>
 
-            <div class="skill-container">
+            <div class="skill">
                 <!-- S:Skill Icons -->
                 <!-- Languages -->
                 <i class="devicon-html5-plain"></i>
                 <i class="devicon-css3-plain"></i>
                 <i class="devicon-javascript-plain"></i>
-                <i class="devicon-php-plain"></i>
-                <i class="devicon-java-plain"></i>
                 <i class="devicon-typescript-plain"></i>
+                <i class="devicon-java-plain"></i>
+                <i class="devicon-php-plain"></i>
                 <i class="devicon-bash-plain"></i>
                 <i class="devicon-kotlin-plain"></i>
                 <i class="devicon-python-plain"></i>
@@ -56,22 +61,20 @@
                 <i class="devicon-feathersjs-original"></i>
                 <i class="devicon-jquery-plain"></i>
                 <i class="devicon-laravel-plain"></i>
-                <!-- <i class="devicon-codeigniter-plain"></i> -->
-                <!-- <i class="devicon-angularjs-plain"></i> -->
+                <i class="devicon-codeigniter-plain"></i>
+                <i class="devicon-angularjs-plain"></i>
                 <i class="devicon-react-plain"></i>
                 <i class="devicon-vuejs-plain"></i>
                 <!-- <i class="devicon-wordpress-plain"></i> -->
 
                 <!-- Tools -->
-                <!-- <i class="devicon-debian-plain"></i> -->
-                <!-- <i class="devicon-ubuntu-plain"></i> -->
                 <i class="devicon-linux-plain"></i>
                 <i class="devicon-apache-plain"></i>
                 <i class="devicon-mysql-plain"></i>
-                <i class="devicon-git-plain"></i>
                 <i class="devicon-gradle-plain"></i>
                 <i class="devicon-composer-line"></i>
                 <i class="devicon-npm-original-wordmark"></i>
+                <i class="devicon-git-plain"></i>
                 <i class="devicon-androidstudio-plain"></i>
                 <i class="devicon-vscode-plain"></i>
                 <i class="devicon-intellij-plain"></i>
@@ -80,7 +83,7 @@
             </div>
         </div>
     </section>
-    <!-- E:Hero Section -->
+    <!-- E:Top Section -->
 
     <!-- S:About Section -->
     <section id="about" class="about">
@@ -133,7 +136,7 @@
         <p>Contact me</p>
 
         <div class="contact-form">
-            <form action="#">
+            <form action="mailto: izardev@gmail.com">
                 <div class="form-input">
                     <input type="email" name="email" id="email" placeholder="Email" required>
                 </div>

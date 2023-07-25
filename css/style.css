@@ -1,6 +1,4 @@
 :root {
-    --bg: linear-gradient(to bottom right, #7eee7e, #00ffff);
-    --shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
     --corner: 0.375rem;
 }
 
@@ -21,12 +19,12 @@ html {
 body {
     background-image: var(--bg);
     background-repeat: no-repeat;
-    /* height: 9000px; */
+    background-attachment: fixed;
 }
 
 /* Navbar Section */
 .navbar {
-    background-color: #ffffff;
+    background-color: var(--primary);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -39,12 +37,12 @@ body {
     box-shadow: var(--shadow);
 }
 
-.navbar .navbar-title {
+.navbar .navbar-title a {
     background-clip: text;
     -webkit-background-clip: text;
     background-image: var(--bg);
     color: transparent;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 }
 
 .navbar .navbar-nav {
@@ -53,7 +51,7 @@ body {
 
 .navbar .navbar-nav a {
     padding: 0 1rem;
-    color: #696969;
+    color: var(--secondary);
 }
 
 .navbar .navbar-nav a:hover {
@@ -63,51 +61,71 @@ body {
     color: transparent;
 }
 
-.navbar .navbar-extra {
+.navbar-extra {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.navbar .navbar-extra a {
+    color: var(--secondary);
+}
+
+.navbar .navbar-extra a:hover {
+    color: var(--tertiary);
+}
+
+#menu,
+#theme {
     display: none;
 }
 
-/* Hero Section */
+#theme.active {
+    display: block;
+}
+
+/* Top Section */
 .top {
     padding-top: 5rem;
     box-shadow: var(--shadow);
 }
 
-.top div {
-    background-color: white;
+.top .top-container {
+    background-color: var(--primary);
     padding: 2rem 7%;
 }
 
-.top h1 {
+.top .top-container h1 {
     background-image: var(--bg);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
     text-align: center;
     font-size: 2rem;
+    line-height: 1.6;
 }
 
-.top .skill-container {
+.top .top-container .skill {
     height: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    padding-top: 1rem;
 }
 
-.top .skill-container i {
+.top .top-container .skill i {
     background-image: var(--bg);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    font-size: 5rem;
+    font-size: 3.5rem;
 }
 
 /* About Section */
 .about,
 .social {
-    padding: 6rem 7% 5rem;
+    padding: 6rem 7%;
     color: white;
 }
 
@@ -122,23 +140,15 @@ body {
     margin: auto;
     text-align: center;
     width: 60%;
-    font-size: 1.2rem;
-    line-height: 1.2;
-}
-
-.about a,
-footer a {
-    color: white;
-    text-decoration: underline;
 }
 
 /* Project Section */
 .project,
 .contact {
     box-shadow: var(--shadow);
-    background-color: white;
-    padding: 6rem 7% 4rem;
-    color: #696969;
+    background-color: var(--primary);
+    padding: 6rem 7%;
+    color: var(--secondary);
 }
 
 .project h1,
@@ -187,12 +197,10 @@ footer a {
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    line-height: 1.6;
 }
 
 .project .card .card-description {
-    color: #696969;
-    font-size: 0.9rem;
+    color: var(--secondary);
 }
 
 /* Social Section */
@@ -214,18 +222,18 @@ footer a {
 }
 
 .contact .contact-form {
-    width: 30%;
+    width: 35rem;
     margin: auto;
 }
 
 .contact .contact-form input,
 .contact .contact-form textarea {
-    border: 1px solid #696969;
+    border: 1px solid var(--secondary);
     border-radius: var(--corner);
     display: block;
     width: 100%;
     padding: 0.75rem;
-    color: #696969;
+    color: 696969;
     margin: 1rem auto;
     font-size: 1em;
 }
@@ -258,12 +266,17 @@ footer a {
     color: white;
 }
 
+footer a {
+    color: white;
+    text-decoration: underline;
+}
+
 /* Media Query */
-/* Mobile */
 @media screen and (max-width: 767px) {
+    /* Navbar Section */
     .navbar .navbar-nav {
         display: none;
-        background-color: white;
+        background-color: var(--primary);
         padding: 0.5rem 1rem;
         border-radius: 0.5rem;
         position: absolute;
@@ -282,31 +295,21 @@ footer a {
         padding-right: 2rem;
     }
 
-    .navbar .navbar-extra {
+    #menu {
         display: block;
     }
 
-    .navbar .navbar-extra a {
-        color: #696969;
-        display: flex;
-    }
-
-    .navbar .navbar-extra a:hover {
-        color: #7eee7e;
-    }
-
-    .top div {
-        padding: 2rem 0.5rem;
-    }
-
-    .top .skill-container i {
+    /* Top Section */
+    .top .top-container .skill i {
         font-size: 2.5rem;
     }
 
+    /* About Section */
     .about p {
         width: 100%;
     }
 
+    /* Project Section */
     .project .row {
         display: block;
     }
@@ -322,10 +325,12 @@ footer a {
         height: 50%;
     }
 
+    /* Social Section */
     .social .twitter-timeline {
         width: 100%;
     }
 
+    /* Contact Section */
     .contact h1,
     .contact p {
         text-align: start;

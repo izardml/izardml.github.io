@@ -46,3 +46,22 @@ if(hour >= 18 || hour < 5) {
 } else {
     greeting.innerHTML = 'Error desu.'
 }
+
+// theme
+const theme = document.querySelector('#styleTheme')
+const light = document.querySelector('#theme.light')
+const dark = document.querySelector('#theme.dark')
+
+light.onclick = (e) => {
+    light.style.display = 'none'
+    dark.style.display = 'block'
+    theme.setAttribute('href', 'css/dark.css')
+    e.preventDefault()
+}
+
+dark.onclick = (e) => {
+    dark.style.display = 'none'
+    light.style.display = 'block'
+    theme.setAttribute('href', 'css/light.css')
+    e.preventDefault()
+}
